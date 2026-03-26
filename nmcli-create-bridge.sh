@@ -13,6 +13,5 @@ nmcli c add type bridge-slave autoconnect yes con-name "$MAIN_CONN" ifname "$MAI
 systemctl restart NetworkManager
 systemctl start libvirtd
 systemctl enable libvirtd
-echo "net.ipv4.ip_forward = 1" | sudo tee /etc/sysctl.d/99-ipforward.conf
 sysctl -p /etc/sysctl.d/99-ipforward.conf
 EOS
